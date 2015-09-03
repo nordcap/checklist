@@ -208,11 +208,12 @@ script src="bower_components/materialize/bin/materialize.js" script <br>
         <h3 id="compass"><strong>D) Установка compass</strong> - <a href="#toc">top</a></h3>
         <ol>
             <li>Compass требует наличия Ruby. <a href="https://www.ruby-lang.org/en/downloads/">Установить с оф.сайта</a> </li>
-            <li>Установить compass в папке <b>/app</b>. Настроить(перенастроить) конфигурацию можно в файле <b>config.rb</b>
+            <li>Установить compass в папке проекта. Обязательно следует настроить конфигурацию  в файле <b>config.rb</b>
                 <code>
                     gem update --system <br>
                     gem install compass <br>
-                    compass create projectName <br> --sass-dir "sass" <br>--css-dir "css" <br>--javascripts-dir "js" <br>--images-dir "img"
+                    compass create app --bare //чистый проект <br><br>
+                    compass create app <br> --sass-dir "sass" <br>--css-dir "css" <br>--javascripts-dir "js" <br>--images-dir "img"
                 </code>
             </li>
         </ol>
