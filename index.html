@@ -112,8 +112,10 @@
             git merge  nameBrunch// сливает ветку с мастером 
         </code>
         <p>В файл исключений .gitignore добавить
-        <code>node_modules <br>
-app/bower_components</code></p>
+            <code>node_modules <br>
+app/bower_components <br>
+app/sass-cache //если используется compass
+</code></p>
         <hr>
         <h3 id="managerPackage"><strong>B) Установка пакетных менеджеров <b>npm, bower</b></strong> - <a href="#toc">top</a></h3>
         <ol>
@@ -208,7 +210,7 @@ script src="bower_components/materialize/bin/materialize.js" script <br>
         <h3 id="compass"><strong>D) Установка compass</strong> - <a href="#toc">top</a></h3>
         <ol>
             <li>Compass требует наличия Ruby. <a href="https://www.ruby-lang.org/en/downloads/">Установить с оф.сайта</a> </li>
-            <li>Установить compass в папке проекта. Обязательно следует настроить конфигурацию  в файле <b>config.rb</b>
+            <li>Установить compass в папке проекта. Обязательно следует настроить конфигурацию в файле <b>config.rb</b>
                 <code>
                     gem update --system <br>
                     gem install compass <br>
@@ -219,12 +221,15 @@ script src="bower_components/materialize/bin/materialize.js" script <br>
         </ol>
         <hr>
         <h3 id="susy"><strong>E) Установка susy</strong> - <a href="#toc">top</a></h3>
-        <p>Установить susy можно несколькими способами</p>
+        <p>Установить susy в системе
+            <code>gem install susy</code>
+        </p>
+        <p>Подключить susy в проект можно несколькими способами</p>
         <ol>
             <li>Если используется с compass
                 <code>
                 compass install susy //текущий проект <br>
-                compass create --using susy projectName //при создании нового проекта
+                compass create --using susy app //при создании нового проекта (app-папка название проекта см.выше)
             </code>
             </li>
             <li>Отдельно через bower
@@ -354,7 +359,6 @@ script src="bower_components/materialize/bin/materialize.js" script <br>
             <li>pages/</li>
             <li>themes/</li>
         </ol>
-
         <pre>
 @import 'vendors/bootstrap';
 @import 'vendors/jquery-ui';
@@ -385,8 +389,7 @@ script src="bower_components/materialize/bin/materialize.js" script <br>
 @import 'themes/theme';
 @import 'themes/admin';
     </pre>
-
-    <hr>
+        <hr>
         <p class="append-bottom alt large"><strong>Alex Budaev</strong></p>
         <p><a href="#toc">Go To Table of Contents</a></p>
         <hr class="space">
